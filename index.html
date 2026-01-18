@@ -1,78 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Passowrd Generator</title>
-</head>
-
-<body>
-    <div class="main-container">
-        <div class="main-wrapper">
-            <div class="page-header">
-                <h1>Generate a Secure Password.</h1>
-                <div class="userImg"><img src="https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-hipster-vector-stock-91462914.jpg" alt="" width="50px"></div>
-            </div>
-
-            <div class="newPass-container">
-                <div class="newPass-wrapper">
-                    <div class="newPass-box">
-                        <p class="newPass" id="newPass"></p>
-                    </div>
-                    <div class="copyBtn" id="copyBtn" title="Copy Password"><button><i class="fa-solid fa-copy"></i></button></div>
-                    <div class="updatePass" id="genNewPass" title="New Password"><button><i class="fa-solid fa-arrow-rotate-right"></i></button></div>
-                </div>
-            </div>
-
-            <div class="pass-settings-container">
-                <div class="pass-settings-wrapper">
-                    <div class="pass-settings">
-                        <div class="pass-len">
-                            <h4>Password Length</h4>
-                            <div class="pass-len-input">
-                                <span id="dispPassLen"></span>
-                                <span>4</span>
-                                <input type="range" name="passLen" id="passLen" min="4" max="50" value="08">
-                                <span>50</span>
-                            </div>
-                        </div>
-                        <div class="pass-includings">
-                            <h4>Password Settings</h4>
-                                <div class="include">
-                                    <h3>Include Letters</h3>
-                                    <input type="checkbox" name="letters" id="ltr-cBox" checked>
-                                </div>
-                                <div class="include">
-                                    <h3>Include Numbers</h3>
-                                    <input type="checkbox" name="numbers" id="num-cBox" checked>
-                                </div>
-                                <div class="include">
-                                    <h3>Include Symbols</h3>
-                                    <input type="checkbox" name="Symbols" id="sym-cBox" checked>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="generatePassBtn-container">
-                        <div class="generatePassBtn-wrapper">
-                            <button class="generatePassBtn" id="generatePassBtn">Generate Password</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
-<script src="script1.js"></script>
-<script src="script2.js"></script>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/shield.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Generate secure, random passwords with customizable length and character options. Cryptographically secure password generator." />
+    <meta name="keywords" content="password generator, secure password, random password, strong password, crypto" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>PassGen - Secure Password Generator</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
