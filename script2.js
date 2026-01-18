@@ -1,21 +1,24 @@
-    // script to update the length of password everytime the length slider is clicked
+// Copy to clipboard with toast notification
+const copyBtn = document.getElementById("copyBtn");
+const toast = document.getElementById("toast");
 
-    document.getElementById("dispPassLen").innerText = document.getElementById("passLen").value;
-    document.getElementById("passLen").addEventListener("click", () => {
-        document.getElementById("dispPassLen").innerText = document.getElementById("passLen").value;
-    })
+function showToast() {
+    toast.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
+    toast.classList.add("opacity-100", "translate-y-0");
 
-    // script to copy the password on button click 
+    setTimeout(() => {
+        toast.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
+        toast.classList.remove("opacity-100", "translate-y-0");
+    }, 2000);
+}
 
-    var copyBtn = document.getElementById("copyBtn");
-    var newPass = document.getElementById("newPass");
+function copyPassword() {
+    const password = document.getElementById("newPass").innerText;
+    navigator.clipboard.writeText(password).then(() => {
+        showToast();
+    }).catch(err => {
+        console.error("Failed to copy:", err);
+    });
+}
 
-    // function to copy password
-    function copy() {
-        newPass = newPass.innerText;
-        navigator.clipboard.writeText(newPass);
-        alert("Copied");
-    }
-
-    // calling function in button click
-    copyBtn.addEventListener("click", copy);
+copyBtn.addEventListener("click", copyPassword);
